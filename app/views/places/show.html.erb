@@ -94,14 +94,17 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY4DasDJYRAVZjhUsdV8pyLXA
     </div>
   <% end %>
 </div>
-
+<br/>
+<br/>
 <% @place.photos.each do |photo| %>
   <div class="col-12 col-sm-6">
       <blockquote>
           <%= photo.caption %>
           <small>
-              <%= photo.user.email %>
-              </smal>
+            <%= image_tag photo.picture.to_s, class: 'photoup' %>
+            <%= photo.user.email %>
+          </small>
       </blockquote>
   </div>
   <% end %>
+
